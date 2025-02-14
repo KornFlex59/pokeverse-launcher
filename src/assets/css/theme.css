@@ -18,7 +18,7 @@
     --color: #151515;
     --background: rgb(245, 245, 245);
     --background-element: #c2c2c2;
-    --background-transparent: rgba(204, 204, 204, 0.8);
+    --background-transparent: rgba(244, 197, 66, 0.7);
     --shadow: rgba(208, 208, 208, 0.7);
     --svg-color: brightness(0) saturate(100%) invert(0%) sepia(5%) saturate(1719%) hue-rotate(357deg) brightness(94%) contrast(84%);
 }

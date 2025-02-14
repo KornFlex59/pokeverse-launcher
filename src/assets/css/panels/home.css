@@ -16,14 +16,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--background);
+    background: #222831;
     width: 25rem;
     height: 3rem;
-    color: var(--color);
+    color: #EEEEEE;
     border-radius: 10px;
     margin-top: 3rem;
     padding: 1rem;
     text-align: center;
+    margin-right: auto;
+    margin-left: 3rem; /* Ajuste la valeur selon ton besoin */
+    
 }
 
 .server-status-icon {
@@ -37,7 +40,7 @@
 
 .server-status-text {
     font-size: 0.6rem;
-    color: #1AC707;
+    color: #FFD369;
 }
 
 .server-status-infos .red {
@@ -45,7 +48,7 @@
 }
 
 .status-player-count {
-    background: var(--shadow);
+    background: #393E46;
     min-width: 3rem;
     height: 3rem;
     border-radius: 10px;
@@ -65,7 +68,7 @@
     right: 10px;
     border-radius: 15px;
     border: solid 5px var(--background);
-    background: #1AC707;
+    background: #4CAF50;
 }
 
 .red:after {
@@ -85,21 +88,24 @@
  *                                                                             *
  ******************************************************************************/
 
-.new-tab {
+ .new-tab {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 85%;
+    width: 40%; /* Réduit la largeur */
     height: 100%;
+    margin-left: auto; /* Pousse l'élément vers la droite */
+
 }
+
 
 .titre-tab-new {
     margin-top: 1rem;
     font-size: 2rem;
     padding: 0.5rem 1rem;
     border-radius: 2rem;
-    background: var(--background-transparent);
-    color: var(--color);
+    background: rgba(34, 40, 49, 0.8);
+    color: #FFD369;
 }
 
 .news-list {
@@ -165,34 +171,44 @@
  *                                                                             *
  ******************************************************************************/
 
-.social-tab {
-    position: absolute;
-    display: flex;
-    bottom: 0;
-    right: 0;
-    width: 15%;
-    height: calc(80% - 1rem);
-    justify-content: center;
-    margin-bottom: 1rem;
+ .social-tab {
+    position: fixed !important; /* Fixe la position par rapport à la fenêtre */
+    top: 1rem !important; /* Plus proche du haut */
+    right: 0.5rem !important; /* Plus proche de la droite */
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 10rem !important; /* Espacement entre les icônes */
+    z-index: 9999 !important; /* Assure que c’est au-dessus des autres éléments */
+    justify-content: space-between;
 }
 
+
+
+
+
+
 .social-list {
-    border-radius: 10px;
-    height: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    
 }
+
 
 .social-block {
     display: flex;
     background: var(--background-transparent);
-    width: 90px;
-    height: 90px;
-    margin-bottom: 1rem;
+    width: 60px; /* Réduire un peu si besoin */
+    height: 60px;
+    margin-bottom: 0.5rem;
     border-radius: 10px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     align-items: center;
     justify-content: center;
+    margin: 0 5px; /* Espace à gauche et à droite */
+
 }
+
 
 .social-block .icon-social {
     pointer-events: none;
@@ -208,13 +224,20 @@
  *                                                                             *
  ******************************************************************************/
 
-.sidebar {
+ .sidebar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: 90px;
-    background: var(--background-transparent);
+    width: 80%;
+    height: 70px;
+    background: rgba(34, 40, 49, 0.9);
+    border-radius: 15px;
+    padding: 0 2rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .player-options {
@@ -254,12 +277,20 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    border: solid 3px var(--element-color);
+    background: linear-gradient(135deg, #FFD369, #FFB400);
+    border: solid 3px var(red);
     border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(255, 211, 105, 0.3);
     height: 3.2rem;
     padding-right: 1.9rem;
-}
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
 
+}
+.play-instance:hover {
+    box-shadow: 0px 6px 15px rgba(255, 211, 105, 0.5);
+    transform: scale(1.05);
+}
 .play-btn {
     border: none;
     border-radius: 10px;
@@ -294,32 +325,42 @@
 
 .info-starting-game {
     display: none;
-    text-align: center;
+    font-size: 1rem;
+    color: #FFF;
+    opacity: 0.8;
+    margin-left: 10px;
 }
 
 .progress-bar {
     appearance: none;
-    height: 10px;
-    margin: 0.5rem 0;
+    width: 100px;
+    height: 5px;
+    background: #222831;
+    border-radius: 10px;
+    border: 1px solid #FFD369;
+    overflow: hidden;
 }
 
 .progress-bar::-webkit-progress-bar {
-    background-color: var(--background);
+    background-color: transparent;
     border: solid 1px var(--element-color);
     border-radius: 10px;
 }
 
 .progress-bar::-webkit-progress-value {
-    background-color: var(--element-color);
+    background-color: #FFD369;
     border-radius: 10px;
 }
 
 .settings-btn {
-    width: 3rem;
-    height: 3rem;
-    font-size: 3rem;
-    color: var(--element-color);
-    margin: 0 1.5rem;
+    font-size: 1.8rem;
+    color: #FFD369;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.settings-btn:hover {
+    transform: rotate(15deg);
 }
 
 .instance-popup {
@@ -327,7 +368,7 @@
     display: none;
     width: 100%;
     height: 100%;
-    background: #000000b3;
+    background: rgba(0, 0, 0, 0.7);
     z-index: 10;
     flex-direction: column;
     align-items: center;
@@ -337,7 +378,7 @@
 
 .instances-tab {
     position: relative;
-    background: var(--background);
+    background: #222831;
     border-radius: 10px;
     padding: 1rem 3rem;
 }
@@ -347,7 +388,7 @@
     display: flex;
     top: 10px;
     right: 10px;
-    background: var(--shadow);
+    background: #393E46;
     height: 30px;
     width: 30px;
     border-radius: 10px;
@@ -359,9 +400,10 @@
     margin-top: 1.5rem;
     font-size: 2rem;
 }
+.instance-elements:hover,
 
 .instance-elements {
-    background: var(--background-element);
+    background: #31363F;
     text-align: center;
     border-radius: 10px;
     margin: 0.5rem 0;
@@ -374,5 +416,18 @@
 }
 
 .active-instance {
-    background: var(--element-color);
+    background: #FFD369;
+}
+
+.progress-bar::-webkit-progress-bar {
+    background-color: #222831;
+    border: solid 1px #FFD369;
+}
+
+.progress-bar::-webkit-progress-value {
+    background-color: #FFD369;
+}
+
+.settings-btn {
+    color: #FFD369;
 }
