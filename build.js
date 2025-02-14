@@ -84,11 +84,14 @@ class Index {
                     }]
                 },
                 nsis: {
-                    oneClick: true,
-                    allowToChangeInstallationDirectory: false,
+                    oneClick: false,  // Désactive l'installation automatique (réduit les alertes antivirus)
+                    allowToChangeInstallationDirectory: true,  // Permet à l'utilisateur de choisir où installer
                     createDesktopShortcut: true,
-                    runAfterFinish: true
+                    runAfterFinish: true,
+                    deleteAppDataOnUninstall: true,  // Nettoie les fichiers après désinstallation (évite les faux positifs)
+                    perMachine: false  // Empêche une installation nécessitant des droits admin (réduit les alertes)
                 },
+                
                 mac: {
                     icon: "./app/assets/images/icon.icns",
                     category: "public.app-category.games",
