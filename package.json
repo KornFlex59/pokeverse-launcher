@@ -1,7 +1,7 @@
 {
     "name": "Pokeverse-Launcher",
     "preductname": "Pokeverse Launcher",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Launcher Mincraft pour le serveur Pokeverse",
     "main": "src/app.js",
     "author": {
