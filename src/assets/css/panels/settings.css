@@ -6,11 +6,11 @@
 .nav-settings {
     width: 20%;
     height: 100%;
-    background: var(--background);
+    background: #222831;
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
+    justify-content: top;
     font-size: 2.5rem;
 }
 
@@ -33,7 +33,7 @@
 
 .nav-settings-btn {
     font-size: 50%;
-    border: solid 4px var(--element-color);
+    border: solid 4px var(red);
     padding: 5px 10px;
     border-radius: 10px;
     width: 70%;
@@ -43,8 +43,8 @@
 }
 
 .active-settings-BTN {
-    background: var(--element-color);
-}
+    background: #FFD369;
+}   
 
 .container-settings {
     position: absolute;
@@ -119,7 +119,7 @@
 }
 
 .account {
-    background: var(--background-element);
+    background: #FFD369;
     border: solid 4px var(--background-element);
     display: flex;
     justify-content: space-around;
@@ -272,13 +272,13 @@
     display: block;
     height: 100%;
     width: 0%;
-    background: var(--element-color);
+    background: yellow;
     transition: background-color .2s;
 }
 
 .ram-info-block {
     font-size: 0.9rem;
-    color: var(--color);
+    color: red;
 }
 
 .java-path-input-text {
